@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "multi-agent-system"
+version = "0.1.0"
+description = "Modular LangGraph multi-agent customer support system"
+requires-python = ">=3.10"
+readme = "README.md"
+dependencies = [
+  "langgraph",
+  "langgraph-supervisor",
+  "langgraph-swarm",
+  "langchain-core",
+  "langchain-community",
+  "langchain-openai",
+  "litellm",
+  "langsmith",
+  "openevals",
+  "python-dotenv",
+  "pydantic",
+  "requests",
+  "sqlalchemy",
+]
+
+[project.scripts]
+mas-run = "scripts.run_final_graph:main"
+mas-swarm = "scripts.run_swarm_demo:main"
+mas-evals = "scripts.run_evals:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["agents*", "graph*", "nodes*", "prompts*", "scripts*", "tools*"]
+
+[tool.setuptools]
+py-modules = ["config", "database", "memory", "state", "visualization"]

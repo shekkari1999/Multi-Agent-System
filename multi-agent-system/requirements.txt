@@ -1,0 +1,16 @@
+langgraph
+langgraph-supervisor
+langgraph-swarm
+langchain-core
+langchain-community
+langchain-openai
+litellm
+langsmith
+openevals
+python-dotenv
+pydantic
+requests
+sqlalchemy
+ipython
+nest-asyncio
+pyppeteer
